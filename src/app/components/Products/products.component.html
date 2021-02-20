@@ -1,0 +1,13 @@
+<div class="products">
+  <h1>Products work!</h1>
+  <h1>{{ inputMessage }}</h1>
+  <input type="text" (input)="inputHandler($event)" />
+
+  <div *ngFor="let element of filteredValue">
+    <a>{{ element.name }}</a>
+  </div>
+  <div *ngFor="let product of products">
+    <a [routerLink]="['product/:id']">{{ product.name }}</a>
+    <router-outlet></router-outlet>
+  </div>
+</div>

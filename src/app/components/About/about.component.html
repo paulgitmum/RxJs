@@ -1,0 +1,18 @@
+<div class="about">
+  <h1>About works!</h1>
+  <p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat incidunt
+    iusto reprehenderit tempore aut maxime suscipit voluptas officia culpa,
+    enim, quasi vel obcaecati consectetur laboriosam consequatur sit distinctio
+    excepturi quas.
+  </p>
+  <h1>Todo</h1>
+  <input type="text" (keyup)="onChangeHandler($event)" />
+  <button (click)="addToDo()">Add Todo</button>
+  <div *ngFor="let todo of myTodo">
+    <p>{{ todo.name }}</p>
+
+    <button (click)="deleteHandler(todo.id)">Delete</button>
+
+  </div>
+</div>
